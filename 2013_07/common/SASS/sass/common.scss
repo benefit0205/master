@@ -1,0 +1,51 @@
+@charset "utf-8";
+@import "compass";
+
+//prefix reset
+$experimental-support-for-opera:false;
+$experimental-support-for-microsoft:false;
+
+//reset CSS
+@include global-reset;
+body {
+	height: 100%;
+	min-height: 100%;
+	font-weight: normal;
+}
+
+//clearfix
+.cFix {
+	@include legacy-pie-clearfix;
+}
+
+//general display
+.ofh {overflow:hidden !important;}
+.wBreak {word-spacing: break-all !important;}
+.nWrap {white-space: nowrap !important;}
+.dBlock {display: block !important;}
+.dInline {display: inline !important;}
+.dInlineB {display: inline-block !important;}
+.dTable {display: table !important;}
+.dTableC {display: table-cell;}
+.tFixed {table-layout: fixed;}
+
+//general font-style
+.bold {font-weight:bold !important;}
+.underline {text-decoration: underline !important;}
+
+//general width
+
+//general padding
+
+//general margin
+
+
+
+
+
+
+
+
+
+
+

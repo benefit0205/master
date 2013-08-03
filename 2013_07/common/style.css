@@ -1,0 +1,30 @@
+#modalBody {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.modalBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    filter: alpha(opacity=75);
+}
+
+.modalContainer {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #FFFFFF;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.modalLink>li {
+    font-size: 15px;
+    font-weight: bold;
+}
+
