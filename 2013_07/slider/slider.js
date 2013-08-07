@@ -16,14 +16,14 @@ $(window).on("load", function () {
 		if (crIndex == imgIndex - 2) {
 			$container.stop().animate({
 				left: initPosition - imgWidth + "px"
-			}, 500, function () {
+			}, 1000, 'easeOutBounce', function () {
 				$(this).css("left", 0);
 			});
 			crIndex = 0;
 		} else {
 			$container.stop().animate({
 				left: initPosition - imgWidth + "px"
-			}, 500);
+			}, 1000, 'easeOutBounce');
 			crIndex++;
 		}
 	}
@@ -33,14 +33,14 @@ $(window).on("load", function () {
 		if (crIndex == 1) {
 			$container.stop().animate({
 				left: initPosition + imgWidth + "px"
-			}, 500, function () {
+			}, 1000, 'easeOutBounce', function () {
 				$(this).css("left", -3200 + "px");
 			});
 			crIndex = 4;
 		} else {
 			$container.stop().animate({
 				left: initPosition + imgWidth + "px"
-			}, 500);
+			}, 1000, 'easeOutBounce');
 			crIndex--;
 		}
 	}
@@ -49,6 +49,6 @@ $(window).on("load", function () {
 	$("#left").bind('click', leftSlide);
 	$("#right").bind('click', rightSlide);
 
-	//setInterval(leftSlide, 1000);
+	//setInterval(leftSlide, 1500);
 });
 
