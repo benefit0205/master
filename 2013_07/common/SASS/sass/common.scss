@@ -21,12 +21,12 @@ body {
 //general display
 .ofh {overflow:hidden !important;}
 .wBreak {word-spacing: break-all !important;}
-.nWrap {white-space: nowrap !important;}
+.noWrap {white-space: nowrap !important;}
 .dBlock {display: block !important;}
 .dInline {display: inline !important;}
 .dInlineB {display: inline-block !important;}
 .dTable {display: table !important;}
-.dTableC {display: table-cell;}
+.dTableCell {display: table-cell;}
 .tFixed {table-layout: fixed;}
 
 //general font-style

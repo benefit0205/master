@@ -68,7 +68,7 @@ body {
 .wBreak {
 	word-spacing: break-all !important;
 }
-.nWrap {
+.noWrap {
 	white-space: nowrap !important;
 }
 .dBlock {
@@ -83,7 +83,7 @@ body {
 .dTable {
 	display: table !important;
 }
-.dTableC {
+.dTableCell {
 	display: table-cell;
 }
 .tFixed {
