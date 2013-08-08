@@ -27,7 +27,6 @@ $(window).on("load", function () {
 			crIndex++;
 		}
 	}
-
 	function rightSlide() {
 		var initPosition = $container.position().left;
 		if (crIndex == 1) {

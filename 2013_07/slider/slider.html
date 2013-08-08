@@ -5,6 +5,10 @@
 	<script type="text/javascript" src="js/jquery.easing.js"></script>
 	<script type="text/javascript" src="slider.js"></script>
 	<style type="text/css">
+		body {
+			padding-top: 20px;
+		}
+
 		.wrapper {
 			margin: 0 auto;
 			padding: 0;
@@ -21,21 +25,28 @@
 			left: 0;
 			top: 0;
 		}
+
+		.buttonArea {
+			margin-top: 10px;
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
 <div class="wrapper">
 	<div class="container"><!--
-		--><img src="img/sample1.jpg" width="800" height="400" /><!--
-		--><img src="img/sample2.jpg" width="800" height="400" /><!--
-		--><img src="img/sample3.jpg" width="800" height="400" /><!--
-		--><img src="img/sample4.jpg" width="800" height="400" /><!--
-		--><img src="img/sample1.jpg" width="800" height="400" /><!--
+		--><img src="img/sample1.jpg" width="800" height="400"/><!--
+		--><img src="img/sample2.jpg" width="800" height="400"/><!--
+		--><img src="img/sample3.jpg" width="800" height="400"/><!--
+		--><img src="img/sample4.jpg" width="800" height="400"/><!--
+		--><img src="img/sample1.jpg" width="800" height="400"/><!--
 		-->
 	</div>
 </div>
-<input type="button" value="左へ" id="left"/>
-<input type="button" value="右へ" id="right"/>
+<div class="buttonArea">
+	<input type="button" value="左へ" id="left"/>
+	<input type="button" value="右へ" id="right"/>
+</div>
 </body>
 <script type="text/javascript">
 
