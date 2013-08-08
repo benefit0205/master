@@ -4,22 +4,15 @@ $(window).on("load", function () {
 	var $img = $container.find("img");
 	var imgWidth = $img.width();
 	var imgIndex = $img.length;
-	var initPosition = $container.position().left;
-
-	function init() {
-		$container.css("left", initPosition - 800 + "px");
-		console.log(crIndex);
-	}
 
 	function leftSlide() {
 		var initPosition = $container.position().left;
-		if (crIndex == imgIndex - 2) {
+		if (crIndex == imgIndex) {
+			$container.css('left', 0);
 			$container.stop().animate({
-				left: initPosition - imgWidth + "px"
-			}, 1000, 'easeOutBounce', function () {
-				$(this).css("left", 0);
-			});
-			crIndex = 0;
+				left: - imgWidth + "px"
+			}, 1000, 'easeOutBounce');
+			crIndex = 2;
 		} else {
 			$container.stop().animate({
 				left: initPosition - imgWidth + "px"
@@ -27,24 +20,23 @@ $(window).on("load", function () {
 			crIndex++;
 		}
 	}
+
 	function rightSlide() {
 		var initPosition = $container.position().left;
-		if (crIndex == 1) {
+		if(crIndex == 1 ){
+			$container.css('left', -3200 + 'px');
 			$container.stop().animate({
-				left: initPosition + imgWidth + "px"
-			}, 1000, 'easeOutBounce', function () {
-				$(this).css("left", -3200 + "px");
-			});
+				left: $container.position().left + imgWidth + 'px'
+			}, 1000, 'easeOutBounce');
 			crIndex = 4;
 		} else {
 			$container.stop().animate({
-				left: initPosition + imgWidth + "px"
+				left: initPosition + imgWidth + 'px'
 			}, 1000, 'easeOutBounce');
 			crIndex--;
 		}
 	}
 
-	init();
 	$("#left").bind('click', leftSlide);
 	$("#right").bind('click', rightSlide);
 
