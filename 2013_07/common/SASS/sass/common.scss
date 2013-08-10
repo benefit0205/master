@@ -5,7 +5,8 @@
 $experimental-support-for-opera:false;
 $experimental-support-for-microsoft:false;
 
-//reset CSS
+/* reset css
+------------------------------------------------------------*/
 @include global-reset;
 body {
 	height: 100%;
@@ -13,31 +14,16 @@ body {
 	font-weight: normal;
 }
 
-//clearfix
+/* clear fix
+------------------------------------------------------------*/
 .cFix {
 	@include legacy-pie-clearfix;
 }
 
-//general display
-.ofh {overflow:hidden !important;}
-.wBreak {word-spacing: break-all !important;}
-.noWrap {white-space: nowrap !important;}
-.dBlock {display: block !important;}
-.dInline {display: inline !important;}
-.dInlineB {display: inline-block !important;}
-.dTable {display: table !important;}
-.dTableCell {display: table-cell;}
-.tFixed {table-layout: fixed;}
+/* import general class
+------------------------------------------------------------*/
+@import "general";
 
-//general font-style
-.bold {font-weight:bold !important;}
-.underline {text-decoration: underline !important;}
-
-//general width
-
-//general padding
-
-//general margin
 
 
 

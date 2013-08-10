@@ -1,0 +1,480 @@
+@charset "utf-8";
+.dn {
+	display: none !important;
+}
+
+.db {
+	display: block !important;
+}
+
+.di {
+	display: inline !important;
+}
+
+.dt {
+	display: table !important;
+}
+
+.dtc {
+	display: table-cell !important;
+}
+
+.dib {
+	display: inline-block !important;
+}
+
+.fl {
+	float: left !important;
+}
+
+.fr {
+	float: right !important;
+}
+
+.fn {
+	float: none !important;
+}
+
+.cBoth {
+	clear: both !important;
+}
+
+.cLeft {
+	clear: left !important;
+}
+
+.tCenter {
+	text-align: center !important;
+}
+
+.tRight {
+	text-align: right !important;
+}
+
+.tLeft {
+	text-align: left !important;
+}
+
+.vaTop {
+	vertical-align: top !important;
+}
+
+.vaMiddle {
+	vertical-align: middle !important;
+}
+
+.vaBottom {
+	vertical-align: bottom !important;
+}
+
+.ofh {
+	overflow: hidden !important;
+}
+
+.vaT {
+	vertical-align: top !important;
+}
+
+.vaM {
+	vertical-align: middle !important;
+}
+
+.vaB {
+	vertical-align: bottom !important;
+}
+
+/* Position
+------------------------------------------------------------*/
+.pa {
+	position: absolute !important;
+}
+
+.pr {
+	position: relative !important;
+}
+
+.t0 {
+	top: 0 !important;
+}
+
+.l0 {
+	left: 0 !important;
+}
+
+.b0 {
+	bottom: 0 !important;
+}
+
+.r0 {
+	right: 0 !important;
+}
+
+.t7 {
+	top: 7px !important;
+}
+
+.t8 {
+	top: 8px !important;
+}
+
+.t40 {
+	top: 40px !important;
+}
+
+.t45p {
+	top: 45% !important;
+}
+
+.t25p {
+	top: 25% !important;
+}
+
+.r10 {
+	right: 10px !important;
+}
+
+/* Width
+------------------------------------------------------------*/
+@for $i from 0 through 30 {
+	.w#{30+$i*5} {
+		width: #{30+$i*5}px !important;
+	}
+}
+
+/* 個別 */
+.wHalf {
+	width: 50% !important;
+}
+
+.wFull {
+	width: 100% !important;
+}
+
+.w10p {
+	width: 10% !important;
+}
+
+.w15p {
+	width: 15% !important;
+}
+
+.w33p {
+	width: 33.3% !important;
+}
+
+.w50p {
+	width: 50% !important;
+}
+
+.w70p {
+	width: 70% !important;
+}
+
+.w85p {
+	width: 85% !important;
+}
+
+.w90p {
+	width: 90% !important;
+}
+
+.w58 {
+	width: 58px !important;
+}
+
+.w200 {
+	width: 200px !important;
+}
+
+.w238 {
+	width: 238px !important;
+}
+
+.w275 {
+	width: 275px !important;
+}
+
+.wAuto {
+	width: auto !important;
+}
+
+/* Height
+------------------------------------------------------------*/
+.h52 {
+	height: 52px !important;
+}
+
+.h80 {
+	height: 80px !important;
+}
+
+.h100 {
+	height: 100px !important;
+}
+
+.mh100 {
+	min-height: 100px !important;
+}
+
+.hFull {
+	height: 100% !important;
+}
+
+.mhFull {
+	min-height: 100% !important;
+}
+
+.h400 {
+	height: 400px !important;
+}
+
+.hAuto {
+	height: auto !important;
+}
+
+/* Margin
+------------------------------------------------------------*/
+
+// margin top loop
+@for $i from 0 through 10 {
+	$param: $i;
+	@if $i != 0{
+		$param: #{$i+'px'};
+	}
+	.marT#{$i} {
+		margin-top: $param !important;
+	}
+}
+
+@for $i from 0 through 9 {
+	.marT#{15+$i*5} {
+		margin-top: #{15+$i*5}px !important;
+	}
+}
+
+// margin right loop
+@for $i from 0 through 10 {
+	$param: $i;
+	@if $i != 0{
+		$param: #{$i+'px'};
+	}
+	.marR#{$i} {
+		margin-right: $param !important;
+	}
+}
+
+@for $i from 0 through 9 {
+	.marR#{15+$i*5} {
+		margin-right: #{15+$i*5}px !important;
+	}
+}
+
+// margin bottom loop
+@for $i from 0 through 10 {
+	$param: $i;
+	@if $i != 0 {
+		$param: #{$i+'px'}
+	}
+	.marB#{$i} {
+		margin-bottom: $param !important;
+	}
+}
+
+@for $i from 0 through 9 {
+	.marB#{15+$i*5} {
+		margin-bottom: #{15+$i*5}px !important;
+	}
+}
+
+// margin left roop
+@for $i from 0 through 10 {
+	$param: $i;
+	@if $i != 0 {
+		$param: #{$i+'px'}
+	}
+	.marL#{$i} {
+		margin-left: $param !important;
+	}
+}
+
+@for $i from 0 through 9 {
+	.marL#{15+$i*5} {
+		margin-left: #{15+$i*5}px !important;
+	}
+}
+
+.wHalf {
+	width: 50% !important;
+}
+
+.wFull {
+	width: 100% !important;
+}
+
+/* Height
+------------------------------------------------------------*/
+.mh100 {
+	min-height: 100px !important;
+}
+
+.hFull {
+	height: 100% !important;
+}
+
+.mhFull {
+	min-height: 100% !important;
+}
+
+/* Margin
+------------------------------------------------------------*/
+@for $i from 0 through 10 {
+	$param: $i;
+	@if $i != 0 {
+		$param: #{$i + 'px'};
+	}
+	.marT#{$i} {
+		margin-top: $param !important;
+	}
+}
+
+@for $i from 0 through 9 {
+	.marT#{15+$i*5} {
+		margin-top: #{15+$i*5}px !important;
+	}
+}
+
+@for $i from 0 through 10 {
+	$param: $i;
+	@if $i != 0 {
+		$param: #{$i + 'px'};
+	}
+	.marR#{$i} {
+		margin-right: $param !important;
+	}
+}
+
+@for $i from 0 through 9 {
+	.marR#{15+$i*5} {
+		margin-right: #{15+$i*5}px !important;
+	}
+}
+
+@for $i from 0 through 10 {
+	$param: $i;
+	@if $i != 0 {
+		$param: #{$i + 'px'};
+	}
+	.marB#{$i} {
+		margin-bottom: $param !important;
+	}
+}
+
+@for $i from 0 through 9 {
+	.marB#{15+$i*5} {
+		margin-bottom: #{15+$i*5}px !important;
+	}
+}
+
+@for $i from 0 through 10 {
+	$param: $i;
+	@if $i != 0 {
+		$param: #{$i + 'px'};
+	}
+	.marL#{$i} {
+		margin-left: $param !important;
+	}
+}
+
+@for $i from 0 through 9 {
+	.marL#{15+$i*5} {
+		margin-left: #{15+$i*5}px !important;
+	}
+}
+
+.marLRa {
+	margin-left: auto;
+	margin-right: auto !important;
+}
+
+/* Padding
+------------------------------------------------------------*/
+@for $i from 0 through 10 {
+	$param: $i;
+	@if $i != 0 {
+		$param: #{$i + 'px'};
+	}
+	.padT#{$i} {
+		padding-top: $param !important;
+	}
+}
+
+@for $i from 0 through 9 {
+	.padT#{15+$i*5} {
+		padding-top: #{15+$i*5}px !important;
+	}
+}
+
+@for $i from 0 through 10 {
+	$param: $i;
+	@if $i != 0 {
+		$param: #{$i + 'px'};
+	}
+	.padR#{$i} {
+		padding-right: $param !important;
+	}
+}
+
+@for $i from 0 through 9 {
+	.padR#{15+$i*5} {
+		padding-right: #{15+$i*5}px !important;
+	}
+}
+
+@for $i from 0 through 10 {
+	$param: $i;
+	@if $i != 0 {
+		$param: #{$i + 'px'};
+	}
+	.padB#{$i} {
+		padding-bottom: $param !important;
+	}
+}
+
+@for $i from 0 through 9 {
+	.padB#{15+$i*5} {
+		padding-bottom: #{15+$i*5}px !important;
+	}
+}
+
+@for $i from 0 through 10 {
+	$param: $i;
+	@if $i != 0 {
+		$param: #{$i + 'px'};
+	}
+	.padL#{$i} {
+		padding-left: $param !important;
+	}
+}
+
+@for $i from 0 through 9 {
+	.padL#{15+$i*5} {
+		padding-left: #{15+$i*5}px !important;
+	}
+}
+
+@for $i from 0 through 6 {
+	$param: $i;
+	@if $i != 0 {
+		$param: #{$i*5 + 'px'};
+	}
+	.pad#{$i*5} {
+		padding: $param !important;
+	}
+}
+
+/* Font
+------------------------------------------------------------*/
+@for $i from 0 through 9 {
+	.fs#{8+$i*2} {font-size: #{8+$i*2}px !important;}
+}
+
