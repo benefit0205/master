@@ -6,12 +6,33 @@
 $experimental-support-for-opera: false;
 $experimental-support-for-microsoft: false;
 
+/* sprite images
+********************************************************************************/
+
+$sprite-sprite-dimensions: true;
+@import "sprite/*.png";
+@include all-sprite-sprites;
+
+/* common style
+********************************************************************************/
+body {
+	background-image: inline-image("sprite/bg.png");
+	background-repeat: repeat;
+}
 .container {
 	margin: 0 auto;
 	padding: 5px;
-	border: 1px solid #000;
 	@include border-radius(5px);
 	@include transition(all 0.5s ease);
+	background: rgba(0,0,0,0.8);
+}
+
+.header {
+	height: 30px;
+}
+
+.footer {
+	height: 50px;
 }
 
 #globalNav {
@@ -24,7 +45,9 @@ $experimental-support-for-microsoft: false;
 	padding: 10px;
 	font-size: 12px;
 	@include border-radius(5px);
-	background: #ccc;
+	background: #FFFFFF;
+	-webkit-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 1);
+	box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 1);
 }
 
 .col1 {
@@ -48,6 +71,7 @@ $experimental-support-for-microsoft: false;
 .container {
 	@include mq-custom(0, '540px') {
 		border: none;
+		background: none;
 		padding:0 10px;
 	}
 }
@@ -155,12 +179,15 @@ $experimental-support-for-microsoft: false;
 		right: 10px;
 	}
 	&:before {
-		content:"";
-		position:absolute;
-		top:50%;
-		left:50%;
-		display:block;
-
+		content: "";
+		position: absolute;
+		top: 25%;
+		left: 35%;
+		display: block;
+		width: 17px;
+		height: 20px;
+		background-repeat: no-repeat;
+		background-image: inline-image("sprite/icon_slide_next.png");
 	}
 }
 
@@ -169,6 +196,17 @@ $experimental-support-for-microsoft: false;
 	left: 0;
 	&:hover {
 		left: 10px;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		top: 25%;
+		left: 20%;
+		display: block;
+		width: 17px;
+		height: 20px;
+		background-repeat: no-repeat;
+		background-image: inline-image("sprite/icon_slide_pre.png");
 	}
 }
 
