@@ -150,68 +150,8 @@
 	width: 100% !important;
 }
 
-.w10p {
-	width: 10% !important;
-}
-
-.w15p {
-	width: 15% !important;
-}
-
-.w33p {
-	width: 33.3% !important;
-}
-
-.w50p {
-	width: 50% !important;
-}
-
-.w70p {
-	width: 70% !important;
-}
-
-.w85p {
-	width: 85% !important;
-}
-
-.w90p {
-	width: 90% !important;
-}
-
-.w58 {
-	width: 58px !important;
-}
-
-.w200 {
-	width: 200px !important;
-}
-
-.w238 {
-	width: 238px !important;
-}
-
-.w275 {
-	width: 275px !important;
-}
-
-.wAuto {
-	width: auto !important;
-}
-
 /* Height
 ------------------------------------------------------------*/
-.h52 {
-	height: 52px !important;
-}
-
-.h80 {
-	height: 80px !important;
-}
-
-.h100 {
-	height: 100px !important;
-}
-
 .mh100 {
 	min-height: 100px !important;
 }
@@ -222,14 +162,6 @@
 
 .mhFull {
 	min-height: 100% !important;
-}
-
-.h400 {
-	height: 400px !important;
-}
-
-.hAuto {
-	height: auto !important;
 }
 
 /* Margin
@@ -286,7 +218,7 @@
 	}
 }
 
-// margin left roop
+// margin left loop
 @for $i from 0 through 10 {
 	$param: $i;
 	@if $i != 0 {
@@ -303,101 +235,9 @@
 	}
 }
 
-.wHalf {
-	width: 50% !important;
-}
-
-.wFull {
-	width: 100% !important;
-}
-
-/* Height
-------------------------------------------------------------*/
-.mh100 {
-	min-height: 100px !important;
-}
-
-.hFull {
-	height: 100% !important;
-}
-
-.mhFull {
-	min-height: 100% !important;
-}
-
-/* Margin
-------------------------------------------------------------*/
-@for $i from 0 through 10 {
-	$param: $i;
-	@if $i != 0 {
-		$param: #{$i + 'px'};
-	}
-	.marT#{$i} {
-		margin-top: $param !important;
-	}
-}
-
-@for $i from 0 through 9 {
-	.marT#{15+$i*5} {
-		margin-top: #{15+$i*5}px !important;
-	}
-}
-
-@for $i from 0 through 10 {
-	$param: $i;
-	@if $i != 0 {
-		$param: #{$i + 'px'};
-	}
-	.marR#{$i} {
-		margin-right: $param !important;
-	}
-}
-
-@for $i from 0 through 9 {
-	.marR#{15+$i*5} {
-		margin-right: #{15+$i*5}px !important;
-	}
-}
-
-@for $i from 0 through 10 {
-	$param: $i;
-	@if $i != 0 {
-		$param: #{$i + 'px'};
-	}
-	.marB#{$i} {
-		margin-bottom: $param !important;
-	}
-}
-
-@for $i from 0 through 9 {
-	.marB#{15+$i*5} {
-		margin-bottom: #{15+$i*5}px !important;
-	}
-}
-
-@for $i from 0 through 10 {
-	$param: $i;
-	@if $i != 0 {
-		$param: #{$i + 'px'};
-	}
-	.marL#{$i} {
-		margin-left: $param !important;
-	}
-}
-
-@for $i from 0 through 9 {
-	.marL#{15+$i*5} {
-		margin-left: #{15+$i*5}px !important;
-	}
-}
-
-.marLRa {
-	margin-left: auto;
-	margin-right: auto !important;
-}
-
 /* Padding
 ------------------------------------------------------------*/
+//padding top loop
 @for $i from 0 through 10 {
 	$param: $i;
 	@if $i != 0 {
@@ -414,6 +254,7 @@
 	}
 }
 
+//padding right loop
 @for $i from 0 through 10 {
 	$param: $i;
 	@if $i != 0 {
@@ -430,6 +271,7 @@
 	}
 }
 
+//padding bottom loop
 @for $i from 0 through 10 {
 	$param: $i;
 	@if $i != 0 {
@@ -446,6 +288,7 @@
 	}
 }
 
+//padding left loop
 @for $i from 0 through 10 {
 	$param: $i;
 	@if $i != 0 {
@@ -462,6 +305,7 @@
 	}
 }
 
+//padding loop
 @for $i from 0 through 6 {
 	$param: $i;
 	@if $i != 0 {
@@ -472,9 +316,15 @@
 	}
 }
 
+.pad10 {
+	padding: 10px;
+}
+
 /* Font
 ------------------------------------------------------------*/
 @for $i from 0 through 9 {
-	.fs#{8+$i*2} {font-size: #{8+$i*2}px !important;}
+	.fs#{8+$i*2} {
+		font-size: #{8+$i*2}px !important;
+	}
 }
 
