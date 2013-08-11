@@ -18,4 +18,8 @@ $(function () {
 
 	$(window).bind('load resize', setBind);
 
+	$(".flexslider").flexslider({
+		animation: 'slide',
+		slideshowSpeed: 5000
+	});
 });

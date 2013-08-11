@@ -11,7 +11,7 @@ $experimental-support-for-microsoft: false;
 	padding: 5px;
 	border: 1px solid #000;
 	@include border-radius(5px);
-	@include transition(width 0.5s ease);
+	@include transition(all 0.5s ease);
 }
 
 #globalNav {
@@ -25,7 +25,6 @@ $experimental-support-for-microsoft: false;
 	font-size: 12px;
 	@include border-radius(5px);
 	background: #ccc;
-	height: 100px;
 }
 
 .col1 {
@@ -38,6 +37,10 @@ $experimental-support-for-microsoft: false;
 
 .col3 {
 	width: 170px;
+}
+
+.item img {
+	border-radius: 3px;
 }
 
 /* spMobile & tablet
@@ -93,6 +96,81 @@ $experimental-support-for-microsoft: false;
 	}
 }
 
+/* flexSlider
+********************************************************************************/
+
+.flex-control-nav {
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+}
+
+.flex-control-nav li {
+	margin: 0 6px;
+	display: inline-block;
+	zoom: 1;
+}
+
+.flex-control-paging li a.flex-active {
+	background: #000;
+	background: rgba(0,0,0,0.9);
+	cursor: default;
+}
+
+.flex-control-paging li a {
+	width: 11px;
+	height: 11px;
+	display: block;
+	background: #666;
+	background: rgba(0,0,0,0.5);
+	cursor: pointer;
+	text-indent: -9999px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+.flex-direction-nav a {
+	width: 35px;
+	height: 35px;
+	background:rgba(0,0,0,0.3);
+	@include border-radius(30px);
+	margin: -20px 0 0;
+	display: block;
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+	text-indent: -9999px;
+	opacity: 0;
+	-webkit-transition: all .3s ease;
+}
+
+.flex-direction-nav .flex-next {
+	opacity: 1;
+	right: 0;
+	&:hover {
+		right: 10px;
+	}
+	&:before {
+		content:"";
+		position:absolute;
+		top:50%;
+		left:50%;
+		display:block;
+
+	}
+}
+
+.flex-direction-nav .flex-prev {
+	opacity: 1;
+	left: 0;
+	&:hover {
+		left: 10px;
+	}
+}
 
 
 
