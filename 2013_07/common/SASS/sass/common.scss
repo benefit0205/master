@@ -12,6 +12,11 @@ body {
 	height: 100%;
 	min-height: 100%;
 	font-weight: normal;
+	text-decoration: none;
+}
+a, img {
+	border:none;
+	outline: none;
 }
 
 /* clear fix

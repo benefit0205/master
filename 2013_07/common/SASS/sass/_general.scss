@@ -150,6 +150,9 @@
 	width: 100% !important;
 }
 
+.w200 {
+	width: 200px !important;
+}
 /* Height
 ------------------------------------------------------------*/
 .mh100 {
@@ -327,4 +330,6 @@
 		font-size: #{8+$i*2}px !important;
 	}
 }
+
+.bold {font-weight: bold !important;}
 

@@ -5,22 +5,54 @@
 	<title>jezevel</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	<link rel="stylesheet" href="/common/SASS/css/common.css" type="text/css">
-	<link rel="stylesheet" href="/jezevel/SASS/css/base.css" type="text/css">
+	<meta property="site_name" content="/">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="/">
+	<meta property="og:title" content="/">
+	<meta property="og:description" content="/">
+	<meta property="og:image" content="https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-prn1/851565_496755187057665_544240989_n.jpg"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" href="/common/SASS/css/common.css" type="text/css">
+	<link rel="stylesheet" href="/jezevel/SASS/css/base.css" type="text/css">
 	<script type="text/javascript" src="/common/js/jquery-1.8.3.js"></script>
 	<script type="text/javascript" src="/common/js/masonry.min.js"></script>
 	<script type="text/javascript" src="/common/js/FlexSlider/jquery.flexslider-min.js"></script>
 	<script type="text/javascript" src="/jezevel/SASS/js/function.js"></script>
 </head>
 <body>
-<header class="header pad10">
-	<p>header area</p>
-</header><!--header-->
+<div class="header padT10">
+	<div class="headerInner">
+		<ul class="socialArea cFix">
+			<li>
+				<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Freference%2Fplugins%2Flike&amp;width=100&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;send=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:21px;" allowTransparency="true"></iframe>
+			</li>
+			<li>
+				<a href="https://twitter.com/benefit0205" class="twitter-follow-button" data-show-count="false" data-lang="ja">@benefit0205さんをフォロー</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--header-->
 <section class="content">
 	<div class="container marT10 cFix">
-		<div id="globalNav" class="item col3"></div>
+		<div id="globalNav" class="item col3 cFix">
+			<h1 class="mainLogo">Toxic line</h1>
+			<nav>
+				<ul id="dropNav">
+					<li>
+						<a href="#">About</a>
+						<ul class="pad10">
+							<li>test</li>
+						</ul>
+					</li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Social</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
 		<div class="item col1 flexslider padB30">
 			<ul class="slides">
 				<li><img src="http://dummyimage.com/570x355/2519a6/ffffff.png" alt=""/></li>
@@ -29,9 +61,21 @@
 				<li><img src="http://dummyimage.com/570x355/ff0000/ffffff.png" alt=""/></li>
 			</ul>
 		</div>
-		<div class="item col1"></div>
-		<div class="item col1"></div>
-		<div class="item col1"></div>
+		<div class="item col1 news">
+			<h2>Whats's new</h2>
+			<dl class="padT10">
+				<dt class="fl fs16 bold w200"> 2013.08.11</dt>
+				<dd class="ofh fs16">製作中</dd>
+			</dl>
+			<dl class="padT10">
+				<dt class="fl fs16 bold w200"> 2013.08.11</dt>
+				<dd class="ofh fs16">製作中製作中製作中製作中製作中製作中製作中製作中製作中製作中</dd>
+			</dl>
+			<dl class="padT10">
+				<dt class="fl fs16 bold w200"> 2013.08.11</dt>
+				<dd class="ofh fs16">製作中製作中製作中製作中製作中製作中製作中製作中製作中製作中製作中製作中製作中製作中製作中製作中製作中製作中製作中製作中</dd>
+			</dl>
+		</div>
 		<div class="item col2"></div>
 		<div class="item col2"></div>
 		<div class="item col2"></div>
@@ -52,9 +96,12 @@
 	<!--container-->
 </section>
 <!--content-->
-<footer class="footer pad10">
-	<p>footer area</p>
-</footer><!--footer-->
+<footer class="footer pad10 marT10">
+	<p>
+		<small>&copy;Copyright benefit All.rights reserved.</small>
+	</p>
+</footer>
+<!--footer-->
 
 
 </body>

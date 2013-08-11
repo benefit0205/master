@@ -1,6 +1,10 @@
 @charset "utf-8";
 @import "compass";
 @import "media_queries";
+@import url(http://fonts.googleapis.com/css?family=Port+Lligat+Slab|Titillium+Web|Griffy);
+
+//font-family: 'Titillium Web', sans-serif;
+//font-family: 'Griffy', cursive;
 
 //prefix reset
 $experimental-support-for-opera: false;
@@ -18,26 +22,67 @@ $sprite-sprite-dimensions: true;
 body {
 	background-image: inline-image("sprite/bg.png");
 	background-repeat: repeat;
+	font-size: 12px;
+	color: #333333;
 }
+
+a {
+	text-decoration: none;
+	color: #333333;
+}
+
+h2 {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 20px;
+	padding: 5px;
+	color: #ff0099;
+	background: rgba(0, 0, 0, 0.3);
+	@include border-radius(5px);
+}
+
 .container {
 	margin: 0 auto;
 	padding: 5px;
 	@include border-radius(5px);
 	@include transition(all 0.5s ease);
-	background: rgba(0,0,0,0.8);
+	background: rgba(0, 0, 0, 0.3);
+}
+.header>.headerInner {
+	padding-left:20px;
+}
+.headerInner>ul.socialArea>li {
+	float: left;
 }
 
-.header {
-	height: 30px;
+.footer p {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	text-align: center;
 }
 
-.footer {
-	height: 50px;
+.mainLogo {
+	font-family: 'Griffy', cursive;
+	font-size: 36px;
+	background: inline-image("sprite/logo_bg.png");
+	padding: 5px 0;
 }
 
 #globalNav {
 	@include transition(all 0.5s ease);
 	height: 490px;
+}
+
+nav>ul>li>a {
+	font-family: 'Port Lligat Slab', serif;
+	font-size: 25px;
+	padding-left: 5px;
+}
+
+nav>ul>li {
+	border-top: 1px dotted #333333;
+	padding-top: 10px;
+	padding-bottom: 3px;
 }
 
 .item {
@@ -66,17 +111,23 @@ body {
 	border-radius: 3px;
 }
 
+.news>dl~dl {
+	border-top: 1px dotted #333333;
+	margin-top: 10px;
+}
+
 /* spMobile & tablet
 ********************************************************************************/
 .container {
 	@include mq-custom(0, '540px') {
 		border: none;
 		background: none;
-		padding:0 10px;
+		padding: 0 10px;
 	}
 }
+
 .container>* {
-	@include mq-custom(0, '540px'){
+	@include mq-custom(0, '540px') {
 		position: relative;
 		margin-bottom: 10px !important;
 	}
@@ -86,18 +137,30 @@ body {
 	@include mq-custom('541px', '820px') {
 		width: 570px;
 		overflow: hidden;
-		height: 200px;
+		height: auto;
+		.mainLogo {
+			width: 208px;
+			float: left;
+			background-repeat: no-repeat;
+			background-position: 142px 0px;
+			height: 45px;
+		}
+		#dropNav {
+			overflow: hidden;
+		}
 	}
 	@include mq-custom(0, '540px') {
 		width: 100%;
+		height: auto;
 	}
 }
 
 .item {
-	@include mq-custom(0, '540px'){
+	@include mq-custom(0, '540px') {
 		@include box-sizing(border-box);
 	}
 }
+
 .col1, .col2, #globalNav {
 	@include mq-custom('0', '540px') {
 		width: 100%;
@@ -106,16 +169,16 @@ body {
 	}
 }
 
-.spCols .col3{
-	@include mq-custom(0, '540px'){
-		float:left;
+.spCols .col3 {
+	@include mq-custom(0, '540px') {
+		float: left;
 		width: 48%;
 		margin: 0;
 	}
 }
 
-.spCols .col3:first-child{
-	@include mq-custom(0, '540px'){
+.spCols .col3:first-child {
+	@include mq-custom(0, '540px') {
 		margin-right: 16px;
 	}
 }
@@ -138,8 +201,12 @@ body {
 
 .flex-control-paging li a.flex-active {
 	background: #000;
-	background: rgba(0,0,0,0.9);
+	background: rgba(0, 0, 0, 0.9);
 	cursor: default;
+	@include transition(background 0.5s ease);
+	&:hover {
+		background: rgba(0, 0, 0, 0.3);
+	}
 }
 
 .flex-control-paging li a {
@@ -147,20 +214,20 @@ body {
 	height: 11px;
 	display: block;
 	background: #666;
-	background: rgba(0,0,0,0.5);
+	background: rgba(0, 0, 0, 0.5);
 	cursor: pointer;
 	text-indent: -9999px;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	-o-border-radius: 20px;
 	border-radius: 20px;
-	box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
 .flex-direction-nav a {
 	width: 35px;
 	height: 35px;
-	background:rgba(0,0,0,0.3);
+	background: rgba(0, 0, 0, 0.3);
 	@include border-radius(30px);
 	margin: -20px 0 0;
 	display: block;
@@ -209,6 +276,35 @@ body {
 		background-image: inline-image("sprite/icon_slide_pre.png");
 	}
 }
+
+/* drop down navi
+********************************************************************************/
+#dropNav>li {
+	position: relative;
+}
+
+#dropNav ul {
+	width: 200px;
+	height: 300px;
+	position: absolute;
+	background-color: #ffffff;
+	@include border-radius(5px);
+	border: 1px solid #dddddd;
+	left: 190px;
+	top: -10px;
+	z-index: 1000;
+}
+
+#dropNav ul>li.navBalloon {
+	position: absolute;
+	background: inline-image('sprite/icon_balloon.png');
+	background-repeat: no-repeat;
+	top: 15px;
+	left: -23px;
+	width: 25px;
+	height: 29px;
+}
+
 
 
 
