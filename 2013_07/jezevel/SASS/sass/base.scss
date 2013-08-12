@@ -47,6 +47,12 @@ h2 {
 	@include transition(all 0.5s ease);
 	background: rgba(0, 0, 0, 0.3);
 }
+
+.container.jsReady {
+	position: absolute;
+	top: 100%;
+}
+
 .header>.headerInner {
 	padding-left:20px;
 }
@@ -86,6 +92,7 @@ nav>ul>li {
 }
 
 .item {
+	float: lef;
 	margin: 5px;
 	padding: 10px;
 	font-size: 12px;
@@ -114,6 +121,21 @@ nav>ul>li {
 .news>dl~dl {
 	border-top: 1px dotted #333333;
 	margin-top: 10px;
+}
+
+#spNav {
+	width:45px;
+	height:45px;
+	border: 2px solid #ffffff;
+	@include border-radius(30px);
+	background: inline-image('sprite/icon_spnav.png') no-repeat center center,
+				rgba(0,0,0,0.5);
+	background-size: 30px 15px;
+	-webkit-background-size: 30px 15px;
+	z-index: 1010;
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
 }
 
 /* spMobile & tablet
@@ -152,6 +174,9 @@ nav>ul>li {
 	@include mq-custom(0, '540px') {
 		width: 100%;
 		height: auto;
+		#dropNav {
+			display: none;
+		}
 	}
 }
 

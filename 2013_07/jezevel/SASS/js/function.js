@@ -1,35 +1,24 @@
 $(function () {
+	$("#spNav").hide();
+	$(".container").removeClass("jsReady");
 
-	//dropDown Menu
-	function setDropNav(){
-		$("#dropNav>li").each(function(){
-			var subMenu = $('>ul', this);
-			var defaultHeight = subMenu.height();
-			$(this).hover(function(){
-				if(subMenu.css('display') == 'none' ){
-					subMenu.slideDown('fast', function(){
-						subMenu.css('overflow', 'visible');
-					});
-				} else {
-					subMenu.stop().animate({
-						height: defaultHeight
-					}, 'fast', function(){
-						subMenu.css('overflow', 'visible');
-					});
-				}
-			}, function(){
-				subMenu.stop().slideUp('fast');
-			});
+	$('a').hover(function(){
+		$(this).stop().animate({opacity: 0.3}, 400);
+	}, function(){
+		$(this).stop().animate({opacity:1}, 500);
+	});
+
+	function setSpNav() {
+		var $nav = $("#spNav");
+		var initWidth = $(window).width();
+		if (initWidth <= 540) {
+			$nav.fadeIn().transform({rotateZ: '360deg'}).animate({rotateZ: '0deg'}, 400, 'linear');
+		} else {
+			$nav.fadeOut();
+		}
+		$nav.click(function () {
+			$(window).animate({scrollTop: 0}, 500);
 		});
-		$("#dropNav ul").prepend('<li class="navBalloon"></li>').hide();
-	}
-
-	function fuga(){
-		$("#dropNav").hide();
-		var $spNavs = $('<ul class="spNavs"></ul>');
-		$spNavs.push('<li class="hoge"></li>');
-		$spNavs.push('<li class="hogehoge"></li>');
-		$("body").append($spNavs);
 	}
 
 	//load&resize event
@@ -46,13 +35,11 @@ $(function () {
 				itemSelector: '.item',
 				isFitWidth: true
 			});
-			setDropNav();
 		}
 	}
 
-
-
 	$(window).bind('load resize', setBind);
+	$(window).bind('load resize', setSpNav);
 
 	$(".flexslider").flexslider({
 		animation: 'slide',

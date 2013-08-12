@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Port+Lligat+Slab|Titillium+Web|Griffy);
 /* sprite images
 ********************************************************************************/
-.sprite-sprite, .sprite-bg, .sprite-icon_balloon, .sprite-icon_slide_next, .sprite-icon_slide_pre, .sprite-logo_bg {
-	background: url('../images/sprite-s7545ef616f.png') no-repeat;
+.sprite-sprite, .sprite-bg, .sprite-icon_balloon, .sprite-icon_slide_next, .sprite-icon_slide_pre, .sprite-icon_spnav, .sprite-logo_bg {
+	background: url('../images/sprite-se27cc71f55.png') no-repeat;
 }
 .sprite-bg {
 	background-position: 0 0;
@@ -23,6 +23,11 @@
 	background-position: 0 -250px;
 	height: 20px;
 	width: 17px;
+}
+.sprite-icon_spnav {
+	background-position: 0 -319px;
+	height: 30px;
+	width: 60px;
 }
 .sprite-logo_bg {
 	background-position: 0 -200px;
@@ -62,6 +67,10 @@ h2 {
 	transition: all 0.5s ease;
 	background: rgba(0, 0, 0, 0.3);
 }
+.container.jsReady {
+	position: absolute;
+	top: 100%;
+}
 .header > .headerInner {
 	padding-left: 20px;
 }
@@ -97,6 +106,7 @@ nav > ul > li {
 	padding-bottom: 3px;
 }
 .item {
+	float: lef;
 	margin: 5px;
 	padding: 10px;
 	font-size: 12px;
@@ -122,6 +132,21 @@ nav > ul > li {
 .news > dl ~ dl {
 	border-top: 1px dotted #333333;
 	margin-top: 10px;
+}
+#spNav {
+	width: 45px;
+	height: 45px;
+	border: 2px solid #ffffff;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAeCAYAAABwmH1PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAM1JREFUeNpi/P//fxMDA0Mtw8gAzYxAD/9nGEGABYgfAbEkEDMNc7/+A+LnjM+ePZMDMqqBmH+Ye/gjELcyjIJRMApGwSgYBaNgwAAjiEhPTwe1uNiHuV9/zpw58w9LUVGRfW9vbxBQgHuYe/grNzf3OlDn4QGQIz9CUvTDEdlbKgfigBHi3w2MwAILxNAaIR6+NlpPjYJRMApGwSgYBQPcW3r27JnuSPCslJTUZca3b9+uExISchkJHn737t2eEdd5AE2vHBxB/j0IEGAAuRA4G5LJAGwAAAAASUVORK5CYII=') no-repeat center center, rgba(0, 0, 0, 0.5);
+	background-size: 30px 15px;
+	-webkit-background-size: 30px 15px;
+	z-index: 1010;
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
 }
 /* spMobile & tablet
 ********************************************************************************/
@@ -161,6 +186,9 @@ nav > ul > li {
   #globalNav {
 	width: 100%;
 	height: auto;
+}
+  #globalNav #dropNav {
+	display: none;
 }
 }
 
