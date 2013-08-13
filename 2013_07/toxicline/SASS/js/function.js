@@ -1,13 +1,16 @@
 $(function () {
 	$("#spNav").hide();
+	$('#sliderNav').hide();
 	$(".container").removeClass("jsReady");
 
-	$('a').hover(function(){
+	// hoverアニメーション
+	$('a').hover(function () {
 		$(this).stop().animate({opacity: 0.3}, 400);
-	}, function(){
-		$(this).stop().animate({opacity:1}, 500);
+	}, function () {
+		$(this).stop().animate({opacity: 1}, 500);
 	});
 
+	// spNav
 	function setSpNav() {
 		var $nav = $("#spNav");
 		var initWidth = $(window).width();
@@ -16,9 +19,33 @@ $(function () {
 		} else {
 			$nav.fadeOut();
 		}
-		$nav.click(function () {
-			$(window).animate({scrollTop: 0}, 500);
+	}
+
+	// sideNav
+	function setSideNav(){
+		var $sliderNav = $("#sliderNav");
+
+		$("a.slide").click(function(){
+			$sliderNav.load($(this).attr('href'), data='html', slideComplete);
+			return false;
 		});
+
+		function slideComplete(){
+			var $wrapper = $('.wrapper');
+
+			if($sliderNav.css('display') == 'none'){
+				$sliderNav.show();
+				$wrapper.css({
+					position: 'absolute',
+					left: '65%'
+				});
+			} else {
+				$wrapper.css({
+					left: '0'
+				});
+				$sliderNav.fadeOut(300);
+			}
+		}
 	}
 
 	//load&resize event
@@ -40,6 +67,7 @@ $(function () {
 
 	$(window).bind('load resize', setBind);
 	$(window).bind('load resize', setSpNav);
+	setSideNav();
 
 	$(".flexslider").flexslider({
 		animation: 'slide',

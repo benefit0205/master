@@ -325,11 +325,12 @@
 
 /* Font
 ------------------------------------------------------------*/
-@for $i from 0 through 9 {
+@for $i from 0 through 15 {
 	.fs#{8+$i*2} {
 		font-size: #{8+$i*2}px !important;
 	}
 }
 
 .bold {font-weight: bold !important;}
+.fs35 {font-size: 35px !important;}
 
