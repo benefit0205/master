@@ -108,11 +108,14 @@ body {
 }
 }
 
-.wrapper {
+@media only screen and (min-width: 0) and (max-width: 540px) {
+  .wrapper {
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
+}
+
 a {
 	text-decoration: none;
 	color: #333333;
@@ -166,9 +169,6 @@ h3 {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	-webkit-transition: all 0.7s ease;
-	-moz-transition: all 0.7s ease;
-	transition: all 0.7s ease;
 	background: rgba(0, 0, 0, 0.8);
 }
 .header > .headerInner {
@@ -196,9 +196,6 @@ h3 {
 	padding: 5px 0;
 }
 #globalNav {
-	-webkit-transition: width 0.7s;
-	-moz-transition: width 0.7s;
-	transition: width 0.7s;
 	height: 377px;
 }
 nav.topNav > ul > li > a {
@@ -492,8 +489,8 @@ input[type="text"], textarea {
 }
 }
 
-/*
-*/
+/* side nav
+********************************************************************************/
 .sideNav {
 	text-align: right;
 	position: absolute;
@@ -523,4 +520,30 @@ input[type="text"], textarea {
 .sideNav > nav > ul > li > a {
 	font-family: 'Port Lligat Slab', serif;
 	font-size: 25px;
+}
+/* masonry transition
+********************************************************************************/
+.box-transitions-switch.masonry {
+	-webkit-transition-property: height, width;
+	-moz-transition-property: height, width;
+	-o-transition-property: height, width;
+	transition-property: height, width;
+}
+.box-transitions-switch.masonry .masonry-brick {
+	-webkit-transition-property: left, right, top;
+	-moz-transition-property: left, right, top;
+	-o-transition-property: left, right, top;
+	transition-property: left, right, top;
+}
+.box-transitions-switch.masonry, .box-transitions-switch.masonry .masonry-brick {
+	-webkit-transition-duration: 0.7s;
+	-moz-transition-duration: 0.7s;
+	-o-transition-duration: 0.7s;
+	transition-duration: 0.7s;
+}
+.box-transitions-switch.masonry, .box-transitions-switch.masonry .masonry-brick {
+	-webkit-transition-timing-function: ease;
+	-moz-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	transition-timing-function: ease;
 }

@@ -44,7 +44,9 @@ body {
 }
 
 .wrapper {
-	@include transition(all 0.5s ease);
+	@include mq-custom(0, '540px'){
+		@include transition(all 0.5s ease);
+	}
 }
 
 a {
@@ -100,7 +102,6 @@ h3 {
 	margin: 0 auto;
 	padding: 5px;
 	@include border-radius(5px);
-	@include transition(all 0.7s ease);
 	background: rgba(0, 0, 0, 0.8);
 }
 
@@ -130,7 +131,6 @@ h3 {
 }
 
 #globalNav {
-	@include transition(width 0.7s);
 	height: 377px;
 }
 
@@ -380,7 +380,6 @@ input[type="text"], textarea {
 
 /* modal
 ********************************************************************************/
-
 .modalContainer {
 	display: none;
 	position: fixed;
@@ -416,8 +415,8 @@ input[type="text"], textarea {
 	}
 }
 
-/*
-*/
+/* side nav
+********************************************************************************/
 
 .sideNav {
 	text-align: right;
@@ -449,6 +448,39 @@ input[type="text"], textarea {
 	font-family: 'Port Lligat Slab', serif;
 	font-size: 25px;
 }
+
+/* masonry transition
+********************************************************************************/
+
+.box-transitions-switch.masonry {
+	-webkit-transition-property: height, width;
+	-moz-transition-property: height, width;
+	-o-transition-property: height, width;
+	transition-property: height, width;
+}
+
+.box-transitions-switch.masonry .masonry-brick {
+	-webkit-transition-property: left, right, top;
+	-moz-transition-property: left, right, top;
+	-o-transition-property: left, right, top;
+	transition-property: left, right, top;
+}
+
+.box-transitions-switch.masonry, .box-transitions-switch.masonry .masonry-brick {
+	-webkit-transition-duration: 0.7s;
+	-moz-transition-duration: 0.7s;
+	-o-transition-duration: 0.7s;
+	transition-duration: 0.7s;
+}
+
+.box-transitions-switch.masonry, .box-transitions-switch.masonry .masonry-brick {
+	-webkit-transition-timing-function: ease;
+	-moz-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+
+
 
 
 

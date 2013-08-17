@@ -22,9 +22,9 @@ $(function () {
 	function setSpNav() {
 		var initWidth = $(window).width();
 		if (initWidth <= 540) {
-			$nav.fadeIn().transform({rotateZ: '360deg'}).animate({rotateZ: '0deg'}, 400, 'linear');
+			$nav.not(':animated').fadeIn().transform({rotateZ: '360deg'}).animate({rotateZ: '0deg'}, 400, 'linear');
 		} else {
-			$nav.fadeOut();
+			$nav.not(':animated').fadeOut();
 		}
 	}
 
@@ -69,8 +69,7 @@ $(function () {
 			$container.masonry({
 				"columnWidth": 200,
 				"itemSelector": '.item',
-				"isFitWidth": true,
-				"isAnimated": true
+				"isFitWidth": true
 			});
 			flg = 1;
 		}
