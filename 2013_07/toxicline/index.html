@@ -5,6 +5,7 @@
 	<title>toxic line</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta property="site_name" content="/">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="/">
@@ -14,8 +15,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 	<link rel="stylesheet" href="/common/SASS/css/common.css" type="text/css">
 	<link rel="stylesheet" href="/toxicline/SASS/css/base.css" type="text/css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script type="text/javascript" src="/toxicline/SASS/js/function.js"></script>
 </head>
 <body>
+<div class="introtzikas_bg"><div class="introtzikas"></div></div>
 <div class="wrapper">
 	<section id="sliderNav"></section>
 	<div class="header padT10">
@@ -38,7 +42,8 @@
 				</li>
 			</ul>
 		</div>
-	</div><!--header-->
+	</div>
+	<!--header-->
 	<section class="content">
 		<div class="container marT10 cFix jsReady">
 			<div id="globalNav" class="item col3 cFix">
@@ -54,10 +59,18 @@
 			</div>
 			<div class="item col1 flexslider">
 				<ul class="slides">
-					<li><a href="#"><img src="http://dummyimage.com/570x355/2519a6/ffffff.png" alt=""/></a></li>
-					<li><a href="#"><img src="http://dummyimage.com/570x355/e7f033/ffffff.png" alt=""/></a></li>
-					<li><a href="#"><img src="http://dummyimage.com/570x355/000000/ffffff.png" alt=""/></a></li>
-					<li><a href="#"><img src="http://dummyimage.com/570x355/ff0000/ffffff.png" alt=""/></a></li>
+					<li>
+						<a href="#"><img src="http://dummyimage.com/570x285/2519a6/ffffff.png" alt="" width="100%" height="100%"/></a>
+					</li>
+					<li>
+						<a href="#"><img src="http://dummyimage.com/570x285/e7f033/ffffff.png" alt="" width="100%" height="100%"/></a>
+					</li>
+					<li>
+						<a href="#"><img src="http://dummyimage.com/570x285/000000/ffffff.png" alt="" width="100%" height="100%"/></a>
+					</li>
+					<li>
+						<a href="#"><img src="http://dummyimage.com/570x285/ff0000/ffffff.png" alt="" width="100%" height="100%"/></a>
+					</li>
 				</ul>
 			</div>
 			<div class="item col1 news">
@@ -77,28 +90,34 @@
 			</div>
 			<div class="item col2">
 				<h3>new works</h3>
-				<p class="marT20"><img src="http://dummyimage.com/390x200/00000/ffffff.png" width="100%" alt=""/></p>
+
+				<p class="marT20">
+					<a href="#"><img src="http://dummyimage.com/390x200/00000/ffffff.png" width="100%" alt=""/></a></p>
 			</div>
 			<div class="item col2">
 				<h3>blog up</h3>
 				<ul class="topList">
-					<li><a href="">wwwwww</a></li>
-					<li><a href="">wwwwww</a></li>
-					<li><a href="">wwwwww</a></li>
-					<li><a href="">wwwwww</a></li>
+					<li><a href="#">resizeでぶっ壊れる</a></li>
+					<li><a href="#">↑breakpointが切り替わったとき</a></li>
+					<li><a href="#">sidenavを呼び出した後にresizeしてもぶっ壊れる</a></li>
+					<li><a href="#">面白い時計を入れたい</a></li>
+					<li><a href="#">sidenavを改良する</a></li>
+					<li><a href="#">link遷移の色</a></li>
 				</ul>
 			</div>
 			<div class="item col2">
 				<iframe src="//www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2Fzuck&amp;width=370&amp;height=80&amp;colorscheme=light&amp;layout=standard&amp;show_faces=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:370px; height:80px;" allowTransparency="true"></iframe>
 			</div>
 			<div class="item col2">
-				<p class="tCenter"><img src="/toxicline/SASS/images/sprite/logo_benefit.png" width="248" height="148" alt="benefit"/></p>
+				<p class="tCenter">
+					なんか面白いの入れます
+				</p>
 			</div>
 			<div class="spCols cFix">
 				<div class="item col3">
 					<a href="#">
 						<figure>
-							<img src="http://dummyimage.com/170x130/000000/fff" width="100%" alt=""/>
+							<img src="http://dummyimage.com/170x130/000000/fff" width="100%" height="100%" alt=""/>
 							<figcaption class="marT10 fs12 bold">sample image portfolio</figcaption>
 							<figcaption class="marT10 fs12"><a href="#">http://www.oooo.html</a></figcaption>
 						</figure>
@@ -107,27 +126,7 @@
 				<div class="item col3">
 					<a href="#">
 						<figure>
-							<img src="http://dummyimage.com/170x130/000000/fff" width="100%" alt=""/>
-							<figcaption class="marT10 fs12 bold">sample image portfolio</figcaption>
-							<figcaption class="marT10 fs12"><a href="#">http://www.oooo.html</a></figcaption>
-						</figure>
-					</a>
-				</div>
-			</div>
-			<div class="spCols cFix">
-				<div class="item col3">
-					<a href="#">
-						<figure>
-							<img src="http://dummyimage.com/170x130/000000/fff" width="100%" alt=""/>
-							<figcaption class="marT10 fs12 bold">sample image portfolio</figcaption>
-							<figcaption class="marT10 fs12"><a href="#">http://www.oooo.html</a></figcaption>
-						</figure>
-					</a>
-				</div>
-				<div class="item col3">
-					<a href="#">
-						<figure>
-							<img src="http://dummyimage.com/170x130/000000/fff" width="100%" alt=""/>
+							<img src="http://dummyimage.com/170x130/000000/fff" width="100%" height="100%" alt=""/>
 							<figcaption class="marT10 fs12 bold">sample image portfolio</figcaption>
 							<figcaption class="marT10 fs12"><a href="#">http://www.oooo.html</a></figcaption>
 						</figure>
@@ -138,7 +137,27 @@
 				<div class="item col3">
 					<a href="#">
 						<figure>
-							<img src="http://dummyimage.com/170x130/000000/fff" width="100%" alt=""/>
+							<img src="http://dummyimage.com/170x130/000000/fff" width="100%" height="100%" alt=""/>
+							<figcaption class="marT10 fs12 bold">sample image portfolio</figcaption>
+							<figcaption class="marT10 fs12"><a href="#">http://www.oooo.html</a></figcaption>
+						</figure>
+					</a>
+				</div>
+				<div class="item col3">
+					<a href="#">
+						<figure>
+							<img src="http://dummyimage.com/170x130/000000/fff" width="100%" height="100%" alt=""/>
+							<figcaption class="marT10 fs12 bold">sample image portfolio</figcaption>
+							<figcaption class="marT10 fs12"><a href="#">http://www.oooo.html</a></figcaption>
+						</figure>
+					</a>
+				</div>
+			</div>
+			<div class="spCols cFix">
+				<div class="item col3">
+					<a href="#">
+						<figure>
+							<img src="http://dummyimage.com/170x130/000000/fff" width="100%" height="100%" alt=""/>
 							<figcaption class="marT10 fs12 bold">sample image portfolio</figcaption>
 							<figcaption class="marT10 fs12"><a href="#">http://www.oooo.html</a></figcaption>
 						</figure>
@@ -154,23 +173,33 @@
 					</a>
 				</div>
 			</div>
-		</div><!--container-->
-	</section><!--content-->
+		</div>
+		<!--container-->
+	</section>
+	<!--content-->
 	<p id="spNav"><a href="ajaxSideNav.html" class="slide"></a></p>
 	<footer class="footer pad10 marT10">
-		<p>	<small>&copy;Copyright benefit All.rights reserved.</small></p>
-	</footer><!--footer-->
-</div><!--wrapper-->
-<script type="text/javascript" src="/common/js/jquery-1.8.3.js"></script>
+		<p>
+			<small>&copy;Copyright benefit All.rights reserved.</small>
+		</p>
+	</footer>
+	<!--footer-->
+</div>
+<!--wrapper-->
 <script type="text/javascript" src="/common/js/masonry.min.js"></script>
 <script type="text/javascript" src="/common/js/imagesloaded.js"></script>
 <script type="text/javascript" src="/common/js/jquery.transform.js"></script>
 <script type="text/javascript" src="/common/js/FlexSlider/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="/toxicline/SASS/js/function.js"></script>
 <script type="text/javascript">
-	$(function(){
+	$(function () {
+		$(".flexslider").flexslider({
+			animation: 'slide',
+			slideshowSpeed: 5000,
+			directionNav: false
+		});
+
 		var $modalContainer = $("<div class='modalContainer'></div>");
-		$modalContainer.html('<div class="modalBg"></div><div class="modalContent"></div>');
+		$modalContainer.append('<div class="modalBg"></div>').append('<div class="modalContent"></div>');
 		$('body').append($modalContainer).css('-webkit-tap-highlight-color', 'rgba(0,0,0,0)');
 
 		var $modalContent = $(".modalContent");
@@ -202,7 +231,7 @@
 			}
 		}
 
-		$(window).bind('load resize', function(){
+		$(window).bind('load resize', function () {
 			var docHeight = $(document).height();
 			var initLeftPosition = $(window).width();
 
@@ -211,7 +240,7 @@
 			});
 			$modalContent.stop().animate({
 				top: 100 + 'px',
-				left: (initLeftPosition - $modalContent.width())/2
+				left: (initLeftPosition - $modalContent.width()) / 2
 			}, 500);
 		});
 

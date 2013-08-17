@@ -820,8 +820,8 @@ a, img {
 .pad30 {
 	padding: 30px !important;
 }
-.pad10 {
-	padding: 10px;
+.padB100 {
+	padding-bottom: 100px !important;
 }
 /* Font
 ------------------------------------------------------------*/

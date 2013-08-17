@@ -19,12 +19,28 @@ $sprite-sprite-dimensions: true;
 
 /* common style
 ********************************************************************************/
+.introtzikas_bg {
+	z-index:3000;
+}
+* {
+	word-break: break-all;
+}
+
 body {
 	background-image: inline-image("sprite/bg.png");
 	background-repeat: repeat;
 	font-size: 12px;
 	color: #333333;
 	overflow-x: hidden;
+	max-width: 1210px;
+	margin: 0 auto;
+	@include mq-custom('541px', '820px') {
+		width: 610px;
+		margin: 0 auto;
+	}
+	@include mq-custom(0, '540px') {
+		padding: 0 5px;
+	}
 }
 
 .wrapper {
@@ -34,6 +50,7 @@ body {
 a {
 	text-decoration: none;
 	color: #333333;
+	outline: none;
 }
 
 h2, h3 {
@@ -59,14 +76,14 @@ h3 {
 	font-family: 'IM Fell Double Pica', serif;
 	display: block;
 	padding: 10px;
-	background: rgb(252,255,244);
-	background: -moz-linear-gradient(top,  rgba(252,255,244,1) 0%, rgba(223,229,215,1) 41%, rgba(179,190,173,1) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,255,244,1)), color-stop(41%,rgba(223,229,215,1)), color-stop(100%,rgba(179,190,173,1)));
-	background: -webkit-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(223,229,215,1) 41%,rgba(179,190,173,1) 100%);
-	background: -o-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(223,229,215,1) 41%,rgba(179,190,173,1) 100%);
-	background: -ms-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(223,229,215,1) 41%,rgba(179,190,173,1) 100%);
-	background: linear-gradient(to bottom,  rgba(252,255,244,1) 0%,rgba(223,229,215,1) 41%,rgba(179,190,173,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+	background: rgb(252, 255, 244);
+	background: -moz-linear-gradient(top, rgba(252, 255, 244, 1) 0%, rgba(223, 229, 215, 1) 41%, rgba(179, 190, 173, 1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(252, 255, 244, 1)), color-stop(41%, rgba(223, 229, 215, 1)), color-stop(100%, rgba(179, 190, 173, 1)));
+	background: -webkit-linear-gradient(top, rgba(252, 255, 244, 1) 0%, rgba(223, 229, 215, 1) 41%, rgba(179, 190, 173, 1) 100%);
+	background: -o-linear-gradient(top, rgba(252, 255, 244, 1) 0%, rgba(223, 229, 215, 1) 41%, rgba(179, 190, 173, 1) 100%);
+	background: -ms-linear-gradient(top, rgba(252, 255, 244, 1) 0%, rgba(223, 229, 215, 1) 41%, rgba(179, 190, 173, 1) 100%);
+	background: linear-gradient(to bottom, rgba(252, 255, 244, 1) 0%, rgba(223, 229, 215, 1) 41%, rgba(179, 190, 173, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfff4', endColorstr='#b3bead', GradientType=0);
 	font-size: 23px;
 	font-weight: bold;
 	text-align: center;
@@ -83,17 +100,15 @@ h3 {
 	margin: 0 auto;
 	padding: 5px;
 	@include border-radius(5px);
-	@include transition(all 0.3s ease);
-	background: rgba(0, 0, 0, 0.3);
-}
-
-.container.jsReady {
-	position: absolute;
-	top: 100%;
+	@include transition(all 0.7s ease);
+	background: rgba(0, 0, 0, 0.8);
 }
 
 .header>.headerInner {
 	padding-left: 20px;
+	@include mq-custom(0, '540px') {
+		padding-left: 5px;
+	}
 }
 
 .headerInner>ul.socialArea>li {
@@ -115,8 +130,8 @@ h3 {
 }
 
 #globalNav {
-	@include transition(all 0.5s ease);
-	height: 490px;
+	@include transition(width 0.7s);
+	height: 377px;
 }
 
 nav.topNav>ul>li>a {
@@ -132,6 +147,8 @@ nav.topNav>ul>li {
 }
 
 .item {
+	float: left;
+	position: relative;
 	margin: 5px;
 	padding: 10px;
 	font-size: 12px;
@@ -153,6 +170,13 @@ nav.topNav>ul>li {
 	width: 170px;
 }
 
+.spCols {
+	float: left;
+	@include mq-custom(0, '540px') {
+		float: none;
+	}
+}
+
 .item img {
 	border-radius: 3px;
 }
@@ -164,11 +188,19 @@ nav.topNav>ul>li {
 
 .topList>li {
 	margin-top: 10px;
-	background: inline-image('sprite/icon_list.png') no-repeat;
-	padding: 3px 0 4px 24px;
-	@include mq-custom(0, '540px'){
+	background: inline-image('sprite/icon_list.png') no-repeat 0 0;
+	padding: 3px 0 4px 35px;
+	@include transition(background-position 0.5s ease);
+	&:hover {
+		background-position: 10px 0;
+	}
+	@include mq-custom(0, '540px') {
 		background: inline-image('sprite/icon_list.png') no-repeat;
 	}
+}
+
+.topList>li>a, figcaption>a {
+	color: #3b5998;
 }
 
 #spNav {
@@ -184,11 +216,10 @@ nav.topNav>ul>li {
 	bottom: 10px;
 	left: 10px;
 	a {
-		display:block;
+		display: block;
 		height: 45px;
 	}
 }
-
 
 /* contact
 ********************************************************************************/
@@ -203,7 +234,7 @@ input[type="text"], textarea {
 	padding: 4px;
 	display: block;
 	width: 470px;
-	@include mq-custom(0, '540px'){
+	@include mq-custom(0, '540px') {
 		width: 270px;
 	}
 }
@@ -220,7 +251,7 @@ input[type="text"], textarea {
 	background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 41%, #b3bead 100%);
 	background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 41%, #b3bead 100%);
 	background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 41%, #b3bead 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfff4', endColorstr='#b3bead', GradientType=0);
 	font-size: 21px;
 	font-weight: bold;
 	text-align: center;
@@ -238,15 +269,13 @@ input[type="text"], textarea {
 ********************************************************************************/
 .container {
 	@include mq-custom(0, '540px') {
-		border: none;
 		background: none;
-		padding: 0 10px;
+		width: auto !important;
 	}
 }
 
 .container>* {
 	@include mq-custom(0, '540px') {
-		position: relative;
 		margin-bottom: 10px !important;
 	}
 }
@@ -255,6 +284,7 @@ input[type="text"], textarea {
 	@include mq-custom('541px', '820px') {
 		width: 570px;
 		overflow: hidden;
+		float: none;
 		height: auto;
 		.mainLogo {
 			width: 208px;
@@ -300,17 +330,16 @@ input[type="text"], textarea {
 		width: 48%;
 		margin: 0;
 		&:first-child {
-			float:left;
+			float: left;
 		}
 		&:last-child {
-			float:right;
+			float: right;
 		}
 	}
 }
 
 /* flexSlider
 ********************************************************************************/
-
 .flex-control-nav {
 	width: 100%;
 	text-align: center;
@@ -386,6 +415,7 @@ input[type="text"], textarea {
 		@include box-sizing(border-box);
 	}
 }
+
 /*
 */
 
