@@ -335,14 +335,9 @@ input[type="text"], textarea {
 ********************************************************************************/
 @media only screen and (min-width: 0) and (max-width: 540px) {
   .container {
+	padding: 5px 10px;
 	background: none;
 	width: auto !important;
-}
-}
-
-@media only screen and (min-width: 0) and (max-width: 540px) {
-  .container > * {
-	margin-bottom: 10px !important;
 }
 }
 
@@ -400,7 +395,7 @@ input[type="text"], textarea {
 @media only screen and (min-width: 0) and (max-width: 540px) {
   .spCols .col3 {
 	width: 48%;
-	margin: 0;
+	margin: 5px 0;
 }
   .spCols .col3:first-child {
 	float: left;

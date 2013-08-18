@@ -269,14 +269,9 @@ input[type="text"], textarea {
 ********************************************************************************/
 .container {
 	@include mq-custom(0, '540px') {
+		padding: 5px 10px;
 		background: none;
 		width: auto !important;
-	}
-}
-
-.container>* {
-	@include mq-custom(0, '540px') {
-		margin-bottom: 10px !important;
 	}
 }
 
@@ -328,7 +323,7 @@ input[type="text"], textarea {
 .spCols .col3 {
 	@include mq-custom(0, '540px') {
 		width: 48%;
-		margin: 0;
+		margin:5px 0;
 		&:first-child {
 			float: left;
 		}
