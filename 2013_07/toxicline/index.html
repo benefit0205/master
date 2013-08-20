@@ -21,7 +21,20 @@
 </head>
 <body>
 <div class="wrapper">
-	<section id="sliderNav"></section>
+	<section id="sliderNav" class="cFix">
+		<div class="sideNav">
+			<h3 class="padR5 fs35">Menu</h3>
+			<nav>
+				<ul>
+					<li><a href="ajaxContentAbout.html" class="modal">About</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="ajaxContentContact.html" class="modal">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+	<!--sideNav-->
 	<div class="header padT10">
 		<div class="headerInner">
 			<ul class="socialArea cFix">
@@ -52,7 +65,7 @@
 					<ul>
 						<li><a href="ajaxContentAbout.html" class="modal">About</a></li>
 						<li><a href="#">Portfolio</a></li>
-						<li><a href="#">Blog</a></li>
+						<li><a href="http://benefit0205.hatenablog.com/" target="_blank">Blog</a></li>
 						<li><a href="ajaxContentContact.html" class="modal">Contact</a></li>
 					</ul>
 				</nav>
@@ -88,8 +101,8 @@
 					<dd class="ofh fs16">test now</dd>
 				</dl>
 			</div>
-			<div class="item col1 masonry-brick">
-				<p id="clock"></p>
+			<div class="item col2 degClock masonry-brick">
+				<p id="clock" class="cFix"></p>
 			</div>
 			<div class="item col2 masonry-brick">
 				<h3>new works</h3>
@@ -99,15 +112,14 @@
 			<div class="item col2 masonry-brick">
 				<h3>blog up</h3>
 				<ul class="topList">
-					<li><a href="#">sidenavを呼び出した後にresizeするとぶっ壊れる</a></li>
-					<li><a href="#">面白い時計を入れたい</a></li>
 					<li><a href="#">sidenavを改良する</a></li>
 					<li><a href="#">320pxでソーシャルプラグインをsidenavに</a></li>
+					<li><a href="#">socialIcon</a></li>
 					<li><a href="#">送信アラート</a></li>
-					<li><a href="#">twitterプラグイン</a></li>
+					<li><a href="#">曜日の装飾</a></li>
 				</ul>
 			</div>
-			<div class="item col2 masonry-brick">
+			<div class="item col2 socialCol masonry-brick">
 				<iframe src="//www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2Fzuck&amp;width=370&amp;height=80&amp;colorscheme=light&amp;layout=standard&amp;show_faces=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:370px; height:80px;" allowTransparency="true"></iframe>
 			</div>
 			<div class="spCols">
@@ -220,9 +232,19 @@
 			clockFace: 'TwelveHourClock'
 		});
 
+		function meridiumAnimation(){
+			$(".flip-clock-meridium").animate({
+			opacity:0.1
+			},1000, function(){
+				$(".flip-clock-meridium").animate({
+					opacity:1
+				},1000);
+		});
+		}
+
 		var $modalContainer = $("<div class='modalContainer'></div>");
 		$modalContainer.append('<div class="modalBg"></div>').append('<div class="modalContent"></div>');
-		$('body').append($modalContainer).css('-webkit-tap-highlight-color', 'rgba(0,0,0,0)');
+		$('body').append($modalContainer);
 
 		var $modalContent = $(".modalContent");
 
@@ -247,8 +269,10 @@
 
 		function displayModal(sign) {
 			if (sign) {
+				$('body').css('-webkit-tap-highlight-color', 'rgba(0,0,0,0)');
 				$modalContainer.fadeIn(500);
 			} else {
+				$('body').css('-webkit-tap-highlight-color', '');
 				$modalContainer.fadeOut(250);
 			}
 		}
@@ -272,6 +296,7 @@
 		});
 
 		setModal();
+		setInterval(meridiumAnimation, 2000);
 	});
 </script>
 </body>

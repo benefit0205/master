@@ -405,6 +405,12 @@ input[type="text"], textarea {
 }
 }
 
+@media only screen and (min-width: 0) and (max-width: 540px) {
+  .degClock, .socialCol {
+	display: none;
+}
+}
+
 /* flexSlider
 ********************************************************************************/
 .flex-control-nav {

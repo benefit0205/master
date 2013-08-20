@@ -333,6 +333,12 @@ input[type="text"], textarea {
 	}
 }
 
+.degClock, .socialCol {
+	@include mq-custom(0, '540px'){
+		display: none;
+	}
+}
+
 /* flexSlider
 ********************************************************************************/
 .flex-control-nav {

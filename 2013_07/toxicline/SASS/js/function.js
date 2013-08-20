@@ -34,7 +34,7 @@ $(function () {
 
 		$("a.slide").click(function () {
 			$nav.transform({rotateZ: '360deg'}).animate({rotateZ: '0deg'}, 400, 'linear');
-			$sliderNav.load($(this).attr('href'), data = 'html', slideComplete);
+			slideComplete();
 			return false;
 		});
 
@@ -49,7 +49,8 @@ $(function () {
 				});
 			} else {
 				$wrapper.css({
-					left: '0'
+					left: '0',
+					position:'relative'
 				});
 				$sliderNav.fadeOut(300);
 			}
