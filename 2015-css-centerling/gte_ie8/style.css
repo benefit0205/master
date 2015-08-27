@@ -1,0 +1,26 @@
+@charset 'UTF-8';
+
+.lv1 {
+	border: 3px solid #000;
+	height: 300px;
+	width: 300px;
+	display: table;
+	table-layout: fixed;
+	text-align: center;
+	vertical-align: middle;
+	margin: 0 auto;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.lv1 ~ .lv1 {
+	margin-top: 10px;
+}
+.lv2 {
+	vertical-align: middle;
+	display: table-cell;
+}
+.lv2 > img {
+	max-width: 280px;
+	max-height: 280px;
+	vertical-align: middle;
+}
