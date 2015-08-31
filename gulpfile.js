@@ -64,13 +64,3 @@ gulp.task('csscomb', function(){
 		.pipe(csscomb())
 		.pipe(gulp.dest(dir.dist));
 });
-
-// babel
-gulp.task('babel', function(){
-	gulp.src(dir.src + '{,**/}js')
-		.pipe(babel({
-			souceMap: false,
-			modules: 'common'
-		}))
-		.pipe(gulp.dest('./dist/js'));
-});
